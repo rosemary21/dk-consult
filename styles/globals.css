@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  /* outline: 1px red solid; */
+}
+
+:root {
+  --primary: rgb(24, 119, 242);
+  --gray: rgb(246, 247, 248);
+  --background: rgb(255, 255, 255);
+  --foreground: rgb(23, 23, 23);
+  --black: rgb(0, 0, 0);
+  --white: rgb(255, 255, 255);
+  --text-gray: rgb(69, 90, 100);
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --Primary: rgb(24, 119, 242);
+    --gray: rgb(61, 61, 61);
+    --background: rgb(10, 10, 10);
+    --foreground: rgb(237, 237, 237);
+    --black: #ffffff;
+    --white: #000000;
+    --text-gray: "#455A64";
+  }
+} */
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Outfit, sans-serif;
+  scroll-behavior: smooth;
+}
+::selection {
+  background-color: var(--primary);
+  color: var(--white);
+}
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("../assets/fonts/Outfit/Outfit-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: 100 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Urbanist";
+  src: url("../assets/fonts/Urbanist/Urbanist-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+.swiper-wrapper {
+  -webkit-transition-timing-function: linear !important;
+  -o-transition-timing-function: linear !important;
+  transition-timing-function: linear !important;
+}
+.bg1 {
+  background-image: url("../assets/images/pngs/bg1.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
