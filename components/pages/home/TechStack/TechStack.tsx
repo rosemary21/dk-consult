@@ -5,7 +5,7 @@ import {
   Item4,
   Item5,
   Item6,
-  Item7,
+  Item7
 } from "@/assets/images/svgs";
 import SectionContainer from "@/components/layouts/SectionContainer";
 import Image from "next/image";
@@ -27,7 +27,7 @@ const images = [
   Item4,
   Item5,
   Item6,
-  Item7,
+  Item7
 ];
 
 const svg = (
@@ -57,7 +57,7 @@ const ImageSwiper = ({ reverse = false }) => (
     autoplay={{
       delay: 0,
       reverseDirection: reverse,
-      disableOnInteraction: false,
+      disableOnInteraction: false
     }}
     speed={30000}
     loop={true}
@@ -66,16 +66,16 @@ const ImageSwiper = ({ reverse = false }) => (
     breakpoints={{
       320: {
         slidesPerView: 4,
-        spaceBetween: 10,
+        spaceBetween: 10
       },
       640: {
         slidesPerView: 5,
-        spaceBetween: 10,
+        spaceBetween: 10
       },
       1024: {
         slidesPerView: 7,
-        spaceBetween: 1,
-      },
+        spaceBetween: 1
+      }
     }}
   >
     {images.map((img, index) => (
@@ -90,7 +90,10 @@ const ImageSwiper = ({ reverse = false }) => (
 
 const TechStack = () => {
   return (
-    <SectionContainer className="flex flex-col items-center justify-center text-center md:text-left">
+    <SectionContainer
+      className="flex flex-col items-center justify-center text-center md:text-left py-24"
+      contentContainerClassName=" bg-slate-50"
+    >
       <h2 className="text-3xl">Complete Tech Stack Coverage</h2>
       <p className="text-base sm:w-[75%] lg:w-[50%] text-center">
         Our team brings expertise across a vast array of programming languages,

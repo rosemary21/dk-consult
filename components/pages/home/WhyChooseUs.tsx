@@ -1,11 +1,14 @@
 import { DiamondIcon, FocusIcon, SecurityIcon } from "@/assets/icons";
 import Button from "@/components/general/Button";
 import SectionContainer from "@/components/layouts/SectionContainer";
+import { Routes } from "@/utils/variables";
+import { useRouter } from "next/router";
 import React from "react";
 
 const WhyChooseUs = () => {
+  const { push } = useRouter();
   return (
-    <SectionContainer className="grid justify-between grid-cols-1 md:grid-cols-2">
+    <SectionContainer className="grid justify-between grid-cols-1 md:grid-cols-2 py-24">
       <div className="space-y-6 ">
         <h2 className="text-3xl text-center md:text-left">Why choose us</h2>
         <p className="text-base md:w-[50%]">
@@ -34,7 +37,13 @@ const WhyChooseUs = () => {
             <p className="text-sm text-primary">Client Satisfaction</p>
           </div>
         </div>
-        <Button variant="black" className="w-full md:w-fit">
+        <Button
+          onClick={() => {
+            push(Routes.About.path);
+          }}
+          variant="black"
+          className="w-full md:w-fit"
+        >
           Get in touch
         </Button>
       </div>

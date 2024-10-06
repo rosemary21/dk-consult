@@ -4,7 +4,7 @@ import SectionContainer from "../layouts/SectionContainer";
 
 const GetInTouch = () => {
   return (
-    <SectionContainer className="grid md:grid-cols-2 gap-20 grid-cols-1">
+    <SectionContainer className="grid md:grid-cols-2 gap-20 grid-cols-1 py-10  md:py-20">
       <div className="space-y-3">
         <p>Consult. Innovate. Succeed.</p>
         <h2 className="text-3xl ">

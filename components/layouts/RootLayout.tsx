@@ -5,7 +5,7 @@ const RootLayout = forwardRef<
   { children: React.ReactNode; className?: string }
 >(({ children, className }, ref) => {
   return (
-    <div ref={ref} className={`${className} pt-8 relative`}>
+    <div ref={ref} className={`${className} relative`}>
       {children}
     </div>
   );

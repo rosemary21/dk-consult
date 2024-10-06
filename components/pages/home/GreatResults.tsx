@@ -3,7 +3,10 @@ import React from "react";
 
 const GreatResults = () => {
   return (
-    <SectionContainer className="flex items-center justify-center flex-col gap-8 w-full">
+    <SectionContainer
+      className="flex items-center justify-center flex-col gap-8 w-full py-24"
+      contentContainerClassName=" bg-slate-200"
+    >
       <div className="">
         <h2 className="text-3xl text-center md:text-left">
           No Guesswork, Just Great Results

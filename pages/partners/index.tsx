@@ -4,8 +4,11 @@ import Partners from "@/components/pages/partners/Partners";
 import GetInTouch from "@/components/general/GetInTouch";
 import RootLayout from "@/components/layouts/RootLayout";
 import Hero from "@/components/pages/home/Hero";
+import { useRouter } from "next/router";
+import { Routes } from "@/utils/variables";
 
-const index = () => {
+const PartnerPage = () => {
+  const { push } = useRouter();
   return (
     <RootLayout>
       <Hero
@@ -15,6 +18,9 @@ const index = () => {
         primaryButtonLabel="Schedule a Call"
         secondaryButtonLabel="Get in touch"
         images={[HeroBannerImageThree]}
+        secondaryButtonAction={() => {
+          push(Routes.About.path);
+        }}
       />
       <Partners />
       <GetInTouch />
@@ -22,4 +28,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default PartnerPage;

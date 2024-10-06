@@ -3,12 +3,12 @@ import { useRouter } from "next/router";
 import { LogoIcon } from "@/assets/icons";
 import Button from "../Button";
 import NavItem from "./NavItem";
-import { navRoutes } from "@/utils/variables";
-import { RouteType } from "@/utils/types";
+import { navRoutes, Routes } from "@/utils/variables";
 import MobileNav from "./MobileNav";
+import SectionContainer from "@/components/layouts/SectionContainer";
 
 const NavBar: React.FC = () => {
-  const { asPath } = useRouter();
+  const { asPath, push } = useRouter();
   const defaultDotStyle = { left: 0, width: 0, opacity: 0 };
   const [dotStyle, setDotStyle] = useState(defaultDotStyle);
   const navRef = useRef<HTMLDivElement>(null);
@@ -21,7 +21,7 @@ const NavBar: React.FC = () => {
       setDotStyle({
         left: rect.left - (navRect?.left || 0),
         width: rect.width,
-        opacity: 1,
+        opacity: 1
       });
     } else {
       setDotStyle(defaultDotStyle);
@@ -41,7 +41,10 @@ const NavBar: React.FC = () => {
   };
 
   return (
-    <nav className="px-6 shadow-sm bg-white h-16 z-50 w-full sticky top-0 flex items-center justify-between">
+    <SectionContainer
+      contentContainerClassName="shadow-sm bg-white z-50 w-full sticky top-0"
+      className="py-5 flex items-center justify-between"
+    >
       <LogoIcon />
       <div ref={navRef} className=" gap-6 relative hidden lg:flex">
         {navRoutes.map((route: RouteType) => (
@@ -57,7 +60,7 @@ const NavBar: React.FC = () => {
           className="absolute bottom-0 h-[6px] w-[6px] rounded-full bg-primary transition-all duration-300 ease-in-out"
           style={{
             left: `${dotStyle.left + dotStyle.width / 2 - 3}px`,
-            opacity: dotStyle.opacity,
+            opacity: dotStyle.opacity
           }}
         />
       </div>
@@ -72,12 +75,18 @@ const NavBar: React.FC = () => {
             </li>
           ))}
         </ul>
-        <Button variant="black" isSpecial={true}>
+        <Button
+          onClick={() => {
+            push(Routes.About.path);
+          }}
+          variant="black"
+          isSpecial={true}
+        >
           Get in touch
         </Button>
       </div>
       <MobileNav />
-    </nav>
+    </SectionContainer>
   );
 };
 

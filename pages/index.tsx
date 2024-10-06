@@ -1,3 +1,4 @@
+import React from "react";
 import GetInTouch from "@/components/general/GetInTouch";
 import RootLayout from "@/components/layouts/RootLayout";
 import EmpoweringVisionSection from "@/components/pages/home/EmpoweringVisionSection/EmpoweringVisionSection";
@@ -10,8 +11,11 @@ import WhyChooseUs from "@/components/pages/home/WhyChooseUs";
 import { HeroBannerImageTwo } from "@/assets/images/jpgs";
 import { HeroBannerImageOne } from "@/assets/images/pngs";
 import HorizontalScroll from "@/components/general/HorizontalScroll";
+import { useRouter } from "next/router";
+import { Routes } from "@/utils/variables";
 
 export default function Home() {
+  const { push } = useRouter();
   return (
     <RootLayout>
       <Hero
@@ -28,6 +32,9 @@ export default function Home() {
         description="Our seasoned professionals deliver innovative strategies to enhance your business performance and growth."
         primaryButtonLabel="Reserve Your Spot for a Strategic Session"
         secondaryButtonLabel="Get in touch"
+        secondaryButtonAction={() => {
+          push(Routes.About.path);
+        }}
         images={[HeroBannerImageTwo, HeroBannerImageOne]}
       />
       <TrustedBy />

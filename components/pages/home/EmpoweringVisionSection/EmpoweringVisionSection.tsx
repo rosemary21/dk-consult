@@ -1,12 +1,18 @@
 import { bg1, personOne } from "@/assets/images/pngs";
 import Button from "@/components/general/Button";
 import SectionContainer from "@/components/layouts/SectionContainer";
+import { Routes } from "@/utils/variables";
 import Image from "next/image";
+import { useRouter } from "next/router";
 import React from "react";
 
 const EmpoweringVisionSection = () => {
+  const { push } = useRouter();
   return (
-    <SectionContainer className="flex flex-col md:flex-row gap-3 h-full bg-gray py-12">
+    <SectionContainer
+      className="flex flex-col md:flex-row gap-3 h-full bg-gray py-12"
+      contentContainerClassName="py-10 md:py-20"
+    >
       <div className="flex-1 bg-white rounded-2xl p-3 px-5 pb-0">
         <div className="flex-1 flex items-center">
           <div className="flex flex-col gap-6">
@@ -22,7 +28,14 @@ const EmpoweringVisionSection = () => {
               <Button variant="black" className="!px-3  ">
                 Secure Your Consultation with Our Experts
               </Button>
-              <Button variant="secondary">Get in touch</Button>
+              <Button
+                onClick={() => {
+                  push(Routes.About.path);
+                }}
+                variant="secondary"
+              >
+                Get in touch
+              </Button>
             </div>
           </div>
           <div className="relative hidden md:block">

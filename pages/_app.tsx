@@ -8,10 +8,10 @@ import { useEffect, useMemo } from "react";
 import SEO from "@/components/general/seo/SEO";
 
 const Nav = dynamic(() => import("@/components/general/navigation/NavBar"), {
-  ssr: false,
+  ssr: false
 });
 const Footer = dynamic(() => import("@/components/general/navigation/Footer"), {
-  ssr: false,
+  ssr: false
 });
 
 interface SEOProps {
@@ -30,19 +30,7 @@ type CustomAppProps = AppProps & {
   };
 };
 
-const useAOS = () => {
-  useEffect(() => {
-    aos.init({
-      once: true,
-      easing: "ease-in-out",
-      duration: 1000,
-    });
-  }, []);
-};
-
 export default function App({ Component, pageProps }: CustomAppProps) {
-  useAOS();
-
   const memoizedSEO = useMemo(() => {
     const { seoProps } = Component;
     return (
@@ -55,13 +43,20 @@ export default function App({ Component, pageProps }: CustomAppProps) {
       />
     );
   }, [Component]);
+  useEffect(() => {
+    aos.init({
+      once: true,
+      easing: "ease-in-out",
+      duration: 1000
+    });
+  }, []);
 
   return (
     <>
       <NextNProgress color="var(--primary)" height={3.5} />
       {memoizedSEO}
       {!Component.hideNav && <Nav />}
-      <main>
+      <main className="relative">
         <Component {...pageProps} />
       </main>
       {!Component.hideFooter && <Footer />}

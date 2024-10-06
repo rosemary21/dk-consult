@@ -42,22 +42,25 @@ const HorizontalScrollSection: React.FC = () => {
     {
       step: "1",
       icon: <PhoneIcon />,
-      body: "Tell us more about your business on a discovery call. We’ll discuss team structure and approach, success criteria, timescale, budget, and required skill sets to see how we can help.",
+      body: "Tell us more about your business on a discovery call. We’ll discuss team structure and approach, success criteria, timescale, budget, and required skill sets to see how we can help."
     },
     {
       step: "2",
       icon: <ProgressIcon />,
-      body: "In a matter of days, we will finalize your project specifications, agree on an engagement model, select and onboard your team.",
+      body: "In a matter of days, we will finalize your project specifications, agree on an engagement model, select and onboard your team."
     },
     {
       step: "3",
       icon: <EngagementIcon />,
-      body: "Once we’ve agreed on milestones, we’ll immediately get to work. We’ll track progress, report updates, and continuously adapt to your needs.",
-    },
+      body: "Once we’ve agreed on milestones, we’ll immediately get to work. We’ll track progress, report updates, and continuously adapt to your needs."
+    }
   ];
 
   return (
-    <SectionContainer>
+    <SectionContainer
+      contentContainerClassName="py-20"
+      className="flex flex-col gap-10"
+    >
       <div className="text-center">
         <h2 className="text-3xl">Our Process: Simple, Seamless, Streamlined</h2>
         <p className="text-base">

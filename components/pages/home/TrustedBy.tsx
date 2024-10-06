@@ -9,21 +9,18 @@ import {
   Frame6,
   Frame7,
   Frame8,
-  Frame,
+  Frame
 } from "@/assets/images/svgs";
 import Image from "next/image";
 
 const TrustedBy = () => {
   return (
-    <SectionContainer
-      isInnerContent
-      className="bg-black h-[40vh] flex items-center justify-center"
-    >
+    <SectionContainer className="bg-black flex items-center justify-center py-20">
       <div className="w-full flex items-center justify-center flex-col gap-8">
         <p className="text-white text-center text-2xl font-thin">
           Trusted by the best companies
         </p>
-        <div className="flex gap-2 md:gap-5 flex-wrap items-center justify-center md:w-[60%]">
+        <div className="flex gap-4 md:gap-10 flex-wrap items-center justify-center md:w-[60%]">
           <Image src={Frame1} alt="" className="h-6 md:h-full" />
           <Image src={Frame2} alt="" className="h-6 md:h-full" />
           <Image src={Frame3} alt="" className="h-6 md:h-full" />

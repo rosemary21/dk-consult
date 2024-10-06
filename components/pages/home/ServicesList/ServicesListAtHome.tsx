@@ -5,8 +5,8 @@ import { ArrowHeadIocn } from "@/assets/icons";
 
 const ServicesListAtHome = () => {
   return (
-    <SectionContainer className="space-y-6">
-      <div className="space-y-3">
+    <SectionContainer className="flex flex-col gap-10 py-10 md:py-20">
+      <div className="flex flex-col gap-6">
         <p className="text-sm text-text">
           Empower Your Business with Expert IT Consulting
         </p>

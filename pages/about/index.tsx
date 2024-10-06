@@ -1,13 +1,16 @@
 import GetInTouch from "@/components/general/GetInTouch";
 import RootLayout from "@/components/layouts/RootLayout";
 import React from "react";
-import AboutUsSection from "./AboutUsSection";
+import AboutUsSection from "../../components/pages/about/AboutUsSection";
 import GreatResults from "@/components/pages/home/GreatResults";
-import Testimonial from "./Testimonial";
+import Testimonial from "../../components/pages/about/Testimonial";
 import Hero from "@/components/pages/home/Hero";
 import { HeroBannerImageFour } from "@/assets/images/jpgs";
+import { useRouter } from "next/router";
+import { Routes } from "@/utils/variables";
 
-const index = () => {
+const About = () => {
+  const { push } = useRouter();
   return (
     <RootLayout>
       <Hero
@@ -17,6 +20,9 @@ const index = () => {
         primaryButtonLabel="Schedule a Call"
         secondaryButtonLabel="Get in touch"
         images={[HeroBannerImageFour]}
+        secondaryButtonAction={() => {
+          push(Routes.About.path);
+        }}
       />
       <AboutUsSection />
       <GreatResults />
@@ -26,4 +32,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default About;

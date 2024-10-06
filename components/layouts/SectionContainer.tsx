@@ -13,7 +13,7 @@ const SectionContainer = forwardRef<
     <section ref={ref} className={`${contentContainerClassName}`}>
       <div
         className={`${className} ${
-          isInnerContent ? "" : "px-6 my-32 max-w-[1550px] w-full mx-auto"
+          isInnerContent ? "" : "px-10 md:px-20 max-w-[1550px] w-full mx-auto"
         } relative`}
       >
         {children}
