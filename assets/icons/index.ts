@@ -14,6 +14,8 @@ import EngagementIcon from "./EngagementIcon";
 import LocationIcon from "@/assets/icons/LocationIcon";
 import PhoneCallIcon from "./PhoneCallIcon";
 import MailIcon from "@/assets/icons/MailIcon";
+import ChevronRightIcon from "./ChevronRightIcon";
+import ChevronLeftIcon from "./ChevronLeftIcon";
 export {
   LogoIcon,
   ChevronDownIcon,
@@ -30,5 +32,7 @@ export {
   EngagementIcon,
   LocationIcon,
   PhoneCallIcon,
-  MailIcon
+  MailIcon,
+  ChevronRightIcon,
+  ChevronLeftIcon
 };

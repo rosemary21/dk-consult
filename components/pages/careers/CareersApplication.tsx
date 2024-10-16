@@ -4,7 +4,10 @@ import React from "react";
 
 const CareersApplication = () => {
   return (
-    <SectionContainer className="flex-col gap-4 flex items-center justify-center">
+    <SectionContainer
+      contentContainerClassName="py-10"
+      className="flex-col gap-4 flex items-center justify-center"
+    >
       <p className="text-3xl font-medium">We don&apos;t just fill vacancies.</p>
       <p className="md:w-[60%] text-center text-text-gray">
         We go beyond traditional hiring. By spotlighting your strengths and

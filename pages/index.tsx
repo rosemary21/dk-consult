@@ -31,6 +31,9 @@ export default function Home() {
         subTitle="Innovative Solutions, Expert Guidance"
         description="Our seasoned professionals deliver innovative strategies to enhance your business performance and growth."
         primaryButtonLabel="Reserve Your Spot for a Strategic Session"
+        primaryButtonAction={() => {
+          push(Routes.Consult.path);
+        }}
         secondaryButtonLabel="Get in touch"
         secondaryButtonAction={() => {
           push(Routes.Contact.path);

@@ -41,9 +41,9 @@ const svg = (
     <path
       d="M15.5 9L11 4.5M15.5 9L11 13.5M15.5 9H7.625M3.5 9H5.375"
       stroke="#1877F2"
-      stroke-width="1.125"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="1.125"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
   </svg>
 );
