@@ -30,7 +30,7 @@ const EmpoweringVisionSection = () => {
               </Button>
               <Button
                 onClick={() => {
-                  push(Routes.About.path);
+                  push(Routes.Contact.path);
                 }}
                 variant="secondary"
               >

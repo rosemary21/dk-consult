@@ -39,7 +39,7 @@ const WhyChooseUs = () => {
         </div>
         <Button
           onClick={() => {
-            push(Routes.About.path);
+            push(Routes.Contact.path);
           }}
           variant="black"
           className="w-full md:w-fit"

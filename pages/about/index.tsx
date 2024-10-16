@@ -21,7 +21,7 @@ const About = () => {
         secondaryButtonLabel="Get in touch"
         images={[HeroBannerImageFour]}
         secondaryButtonAction={() => {
-          push(Routes.About.path);
+          push(Routes.Contact.path);
         }}
       />
       <AboutUsSection />

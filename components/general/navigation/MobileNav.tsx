@@ -3,12 +3,11 @@ import { useRouter } from "next/router";
 import { LogoIcon } from "@/assets/icons";
 import Button from "../Button";
 import NavItem from "./NavItem";
-import { navRoutes } from "@/utils/variables";
-import { RouteType } from "@/utils/types";
+import { navRoutes, Routes } from "@/utils/variables";
 
 const MobileNav = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const { asPath } = useRouter();
+  const { asPath, push } = useRouter();
 
   const toggleNav = () => setIsOpen(!isOpen);
 
@@ -21,7 +20,11 @@ const MobileNav = () => {
 
   return (
     <div className="lg:hidden">
-      <button onClick={toggleNav} className="p-2">
+      <button
+        title={isOpen ? "close menu" : "open menu"}
+        onClick={toggleNav}
+        className="p-2"
+      >
         <div className="flex flex-col gap-1">
           <span className="h-1 w-9 rounded-lg bg-primary"></span>
           <span className="h-1 w-9 rounded-lg bg-primary"></span>
@@ -32,7 +35,11 @@ const MobileNav = () => {
         <div className="fixed inset-0 bg-white h-fit shadow-md z-50 p-6">
           <div className="flex justify-between items-center mb-8">
             <LogoIcon />
-            <button onClick={toggleNav} className="p-2">
+            <button
+              title={isOpen ? "close menu" : "open menu"}
+              onClick={toggleNav}
+              className="p-2"
+            >
               <div className="flex flex-col gap-1">
                 <span className="h-1 w-9 rounded-lg rotate-45 bg-primary"></span>
                 <span className="h-1 w-6 rounded-lg rotate-45 bg-primary"></span>
@@ -57,7 +64,14 @@ const MobileNav = () => {
                 </li>
               ))}
             </ul>
-            <Button variant="black" isSpecial={true} className="w-full">
+            <Button
+              onClick={() => {
+                push(Routes.Contact.path);
+              }}
+              variant="black"
+              isSpecial={true}
+              className="w-full"
+            >
               Get in touch
             </Button>
           </div>

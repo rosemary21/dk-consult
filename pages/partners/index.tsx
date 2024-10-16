@@ -19,7 +19,7 @@ const PartnerPage = () => {
         secondaryButtonLabel="Get in touch"
         images={[HeroBannerImageThree]}
         secondaryButtonAction={() => {
-          push(Routes.About.path);
+          push(Routes.Contact.path);
         }}
       />
       <Partners />

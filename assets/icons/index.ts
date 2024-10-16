@@ -11,6 +11,9 @@ import FacebookIcon from "./FacebookIcon";
 import PhoneIcon from "./PhoneIcon";
 import ProgressIcon from "./ProgressIcon";
 import EngagementIcon from "./EngagementIcon";
+import LocationIcon from "@/assets/icons/LocationIcon";
+import PhoneCallIcon from "./PhoneCallIcon";
+import MailIcon from "@/assets/icons/MailIcon";
 export {
   LogoIcon,
   ChevronDownIcon,
@@ -25,4 +28,7 @@ export {
   PhoneIcon,
   ProgressIcon,
   EngagementIcon,
+  LocationIcon,
+  PhoneCallIcon,
+  MailIcon
 };

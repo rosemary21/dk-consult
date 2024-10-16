@@ -30,7 +30,7 @@ const RadioButton = forwardRef<HTMLInputElement, InputElementProps>(
               type="radio"
               className={`${inputClassName} peer/radio-btn  opacity-0 z-10 w-full h-full`}
             />
-            <div className="absolute top-1/2 -translate-x-1/2 left-1/2 -translate-y-1/2 w-full h-full flex items-center after:w-[70%] after:h-[70%] after:border-black after:border after:rounded-full peer-checked/radio-btn:after:bg-black justify-center border-black border rounded-full" />
+            <div className="absolute top-1/2 -translate-x-1/2 left-1/2 -translate-y-1/2 w-full h-full flex items-center after:w-[70%] after:h-[70%] after:rounded-full peer-checked/radio-btn:after:bg-primary justify-center border-black peer-checked/radio-btn:border-primary border rounded-full" />
           </div>
           {label && (
             <Label

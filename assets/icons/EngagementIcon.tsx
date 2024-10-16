@@ -1,4 +1,3 @@
-import { IconProps } from "@/utils/types";
 import React from "react";
 
 const EngagementIcon: React.FC<IconProps> = ({

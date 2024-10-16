@@ -63,6 +63,16 @@ export const nav = "nav",
       type: "link",
       activeIn: ["/careers"],
       subRoutes: {}
+    },
+    Consult: {
+      // Icon: ChevronDownIcon,
+      Icon: undefined,
+      path: "/consult",
+      label: "Consult us",
+      showIn: [],
+      type: "link",
+      activeIn: ["/consult"],
+      subRoutes: {}
     }
   },
   allRoutes = convertObjectToArray(Routes),

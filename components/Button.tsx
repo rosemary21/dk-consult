@@ -23,14 +23,14 @@ const Button: React.FC<{
   ...props
 }) => {
   let buttonStyleClassName = "bg-slate-200";
-  let buttonSizeClassName = "text-base";
+  const buttonSizeClassName = "text-base";
 
   switch (buttonType) {
     case "black":
       buttonStyleClassName = "bg-black text-white";
       break;
     case "primary":
-      buttonStyleClassName = "bg-[#5BC4BE]";
+      buttonStyleClassName = "bg-primary text-white";
       break;
     case "secondary":
       buttonStyleClassName = "bg-secondary";

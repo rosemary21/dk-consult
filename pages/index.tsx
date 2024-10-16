@@ -33,7 +33,7 @@ export default function Home() {
         primaryButtonLabel="Reserve Your Spot for a Strategic Session"
         secondaryButtonLabel="Get in touch"
         secondaryButtonAction={() => {
-          push(Routes.About.path);
+          push(Routes.Contact.path);
         }}
         images={[HeroBannerImageTwo, HeroBannerImageOne]}
       />

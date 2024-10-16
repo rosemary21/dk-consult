@@ -77,7 +77,7 @@ const NavBar: React.FC = () => {
         </ul>
         <Button
           onClick={() => {
-            push(Routes.About.path);
+            push(Routes.Contact.path);
           }}
           variant="black"
           isSpecial={true}
