@@ -20,6 +20,9 @@ const About = () => {
         primaryButtonLabel="Schedule a Call"
         secondaryButtonLabel="Get in touch"
         images={[HeroBannerImageFour]}
+        primaryButtonAction={() => {
+          push(Routes.Consult.path);
+        }}
         secondaryButtonAction={() => {
           push(Routes.Contact.path);
         }}
