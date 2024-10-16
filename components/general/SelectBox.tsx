@@ -1,6 +1,5 @@
 import React, { forwardRef } from "react";
 import Label from "./Label";
-import { SelectBoxType } from "@/utils/types";
 
 const SelectBox = forwardRef<HTMLSelectElement, SelectBoxType>(
   (

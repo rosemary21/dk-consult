@@ -1,5 +1,4 @@
 import React from "react";
-import { RouteType } from "@/utils/types";
 import Link from "next/link";
 
 interface NavItemProps {
