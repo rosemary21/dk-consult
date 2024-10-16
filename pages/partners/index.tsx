@@ -18,6 +18,9 @@ const PartnerPage = () => {
         primaryButtonLabel="Schedule a Call"
         secondaryButtonLabel="Get in touch"
         images={[HeroBannerImageThree]}
+        primaryButtonAction={() => {
+          push(Routes.Consult.path);
+        }}
         secondaryButtonAction={() => {
           push(Routes.Contact.path);
         }}
