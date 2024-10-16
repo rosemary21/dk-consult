@@ -25,7 +25,13 @@ const EmpoweringVisionSection = () => {
               consultants to drive your business forward.
             </p>
             <div className="flex flex-col md:flex-row gap-3">
-              <Button variant="black" className="!px-3  ">
+              <Button
+                onClick={() => {
+                  push(Routes.Consult.path);
+                }}
+                variant="black"
+                className="!px-3  "
+              >
                 Secure Your Consultation with Our Experts
               </Button>
               <Button
