@@ -4,8 +4,11 @@ import GetInTouch from "@/components/general/GetInTouch";
 import Hero from "@/components/pages/home/Hero";
 import { HeroBannerImageFive } from "@/assets/images/jpgs";
 import CareersApplication from "@/components/pages/careers/CareersApplication";
+import { useRouter } from "next/router";
+import { Routes } from "@/utils/variables";
 
-const index = () => {
+const Careers = () => {
+  const { push } = useRouter();
   return (
     <RootLayout>
       <Hero
@@ -17,7 +20,13 @@ const index = () => {
         subTitle="Careers"
         description="We are a remote-first company that connects you to global opportunities."
         primaryButtonLabel="Schedule a Call"
+        primaryButtonAction={() => {
+          push(Routes.Consult.path);
+        }}
         secondaryButtonLabel="Get in touch"
+        secondaryButtonAction={() => {
+          push(Routes.Contact.path);
+        }}
         images={[HeroBannerImageFive]}
       />
       <CareersApplication />
@@ -26,4 +35,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Careers;
