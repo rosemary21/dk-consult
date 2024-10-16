@@ -3,7 +3,10 @@ import React from "react";
 
 const Partners = () => {
   return (
-    <SectionContainer className="text-center space-y-5">
+    <SectionContainer
+      contentContainerClassName="md:py-10"
+      className="text-center flex flex-col gap-10 md:gap-20"
+    >
       <div>
         <h1 className="text-3xl">Our Partners</h1>
         <p className="">
