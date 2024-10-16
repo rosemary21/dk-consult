@@ -10,13 +10,7 @@ type SEOProps = {
   locale?: string;
 };
 
-const SEO: React.FC<SEOProps> = ({
-  title,
-  description,
-  image,
-  imageDescription,
-  locale
-}) => {
+const SEO: React.FC<SEOProps> = ({ title, description, image, locale }) => {
   return (
     <>
       <Head key="main-head">

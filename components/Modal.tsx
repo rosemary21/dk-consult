@@ -48,7 +48,7 @@ const Modal: React.FC<{
   className,
   position = "top"
 }) => {
-  const [showModal, setShowModal] = useState(false);
+  const [_showModal, setShowModal] = useState(false);
   const [modalOpened, setModalOpened] = useState(false);
   let modalContainerClassName = "top-0 left-0";
 
@@ -77,6 +77,9 @@ const Modal: React.FC<{
       break;
     case "center-right":
       modalContainerClassName = "top-1/2 right-0 -translate-y-1/2";
+      break;
+
+    default:
       break;
   }
 

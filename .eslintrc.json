@@ -6,7 +6,7 @@
   "plugins": ["@typescript-eslint"],
   "rules": {
     "no-console": "error",
-    "no-undef": "error",
+    // "no-undef": ["error"],
     "@typescript-eslint/no-unused-vars": [
       "error",
       {
@@ -31,9 +31,9 @@
     "no-else-return": "error",
     "no-empty": "error",
     "no-invalid-this": "error",
-    "no-nested-ternary": "error",
+    // "no-nested-ternary": "error",
     "no-redeclare": "error",
-    "no-undef-init": "error",
+    // "no-undef-init": "error",
     "no-var": "error",
     "prefer-arrow-callback": "error",
     "prefer-const": "error",

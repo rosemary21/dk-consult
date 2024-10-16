@@ -5,7 +5,7 @@ import {
   defaultImageDescription,
   twitterHandle,
   authorName,
-  siteUrl,
+  siteUrl
 } from "@/utils/variables";
 import Head from "next/head";
 import Script from "next/script";
@@ -24,7 +24,7 @@ const SEO: React.FC<SEOProps> = ({
   description,
   image,
   imageDescription,
-  locale,
+  locale
 }) => {
   return (
     <>
@@ -57,9 +57,7 @@ const SEO: React.FC<SEOProps> = ({
         <meta name="twitter:image" content={image ? image : defaultImage} />
         <meta
           property="og:image:alt"
-          content={
-            imageDescription ? imageDescription : defaultImageDescription
-          }
+          content={imageDescription || defaultImageDescription}
         />
         <meta property="og:locale" content={locale ? locale : "en_US"} />
         <meta property="og:type" content="website" />

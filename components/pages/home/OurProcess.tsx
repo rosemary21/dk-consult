@@ -1,3 +1,4 @@
+import { Routes } from "@/utils/variables";
 import Link from "next/link";
 import React, { ReactNode } from "react";
 
@@ -23,8 +24,8 @@ const OurProcess: React.FC<ourProcessProps> = ({ step, icon, body }) => {
             <h2 className="">{icon}</h2>
           </div>
           <p>{body}</p>
-          {step == "3" ? (
-            <Link href={""} className="text-primary">
+          {step === "3" ? (
+            <Link href={Routes.Consult.path} className="text-primary">
               {" "}
               Schedule a Call
             </Link>

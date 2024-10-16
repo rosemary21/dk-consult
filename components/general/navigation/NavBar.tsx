@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef, useMemo } from "react";
 import { useRouter } from "next/router";
 import { LogoIcon } from "@/assets/icons";
 import Button from "../Button";
@@ -9,7 +9,10 @@ import SectionContainer from "@/components/layouts/SectionContainer";
 
 const NavBar: React.FC = () => {
   const { asPath, push } = useRouter();
-  const defaultDotStyle = { left: 0, width: 0, opacity: 0 };
+  const defaultDotStyle = useMemo(
+    () => ({ left: 0, width: 0, opacity: 0 }),
+    []
+  );
   const [dotStyle, setDotStyle] = useState(defaultDotStyle);
   const navRef = useRef<HTMLDivElement>(null);
 
@@ -26,7 +29,7 @@ const NavBar: React.FC = () => {
     } else {
       setDotStyle(defaultDotStyle);
     }
-  }, [asPath]);
+  }, [asPath, defaultDotStyle]);
 
   /**
    * Determines if a given route is currently active.
